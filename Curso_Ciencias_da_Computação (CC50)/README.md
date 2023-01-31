@@ -55,3 +55,5 @@ As medidas das imagens são em kilobytes (milhares de bytes), magabytes (milhoes
 
 > Representação de vídeos
 
+C
+
