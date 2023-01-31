@@ -33,9 +33,25 @@ Temos 256 possibilidades representadas com 8 bits (1 byte), que são representad
 *Emoji - são padrões de 0 e 1 que representam cada emoji dependendo das combinações.
 O emoji 😂 é representado pelo decimal (128514) que corresponde ao padrão de bits (000000011111011000000010)
 
-> Representação de cores
+> Representação de imagens
 
+Para a representação de cores, os computadores utilizam padrões de 0 e 1, atribuindo números para diferentes cores. Uma das formas de representar cores é o RGB.
 
+*RGB - Representa a quantidade de Red, Green e Blue que possuiu para formação de uma cor. 
 
+Da mesma forma que é aplicada para as letras, temos a possibilidade de 256 combinações utilizando 8 bits de padrão 0 e 1.
 
+*PIXEL - são os quadradinhos minúsculos (pontos) que representam alguma cor. 1 pixel usa 24 bits, ou 3 bytes.
+
+             R         G       B 
+1 pixel =  8 bits   8 bits   8 bits = TOTAL de 24 bits para representar a formação da cor de cada pixel
+        qtdade de vermelho, de verde e azul respectivamente
+
+As imagens são compostas por muitos, milhares ou milhões desses pixels. Então, usando três bytes para representar a cor de cada pixel, podemos criar imagens.
+
+*Resolução de uma imagem - é quantos pixels ou pontos há horizontalmente e verticalmente.
+
+As medidas das imagens são em kilobytes (milhares de bytes), magabytes (milhoes de bytes) e as medidas dos arquivos de vídeo são em gigabytes (bilhoes de bytes).
+
+> Representação de vídeos
 
