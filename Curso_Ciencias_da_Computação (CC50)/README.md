@@ -1,4 +1,4 @@
-Aula 0 - Inicialização
+Aula 0 - 
 Professor: David J. Malan
 
 # O que é Ciência da Computação?
