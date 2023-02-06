@@ -1,6 +1,6 @@
 # Aula 1: Linguagem C - Professor: David J. Malan
 
-Para salvar arquivos na linguagem C, por padrão o final é .c (ex: nomeDoArquivo.c)
+Para salvar arquivos na linguagem C, por padrão o final é `.c `(ex: nomeDoArquivo.c)
 
 As diversas linguagens de progamação (JavaScript, Java, C, Phython, etc) precisam ser convertidas em binário (padrões de 0 e 1) para que os computadores entendam o código e o executem. 
 
@@ -34,11 +34,27 @@ significa apenas que queremos que a função printf substitua uma variável onde
 
 **Os arquivos de cabeçalho** terminam com `.h`. E se referem a algum outro conjunto de código, como uma biblioteca, que podemos usar em nosso programa. Nós os incluímos com linhas como `#include <cs50.h> `, por exemplo, para a biblioteca que contém a função get_string ou  `#include <stdio.h> `, para a biblioteca que contém a função printf.
 
-``#include <cs50.h> 
-  #include <studio.h>
+~~~~ 
+
+#include <cs50.h> 
+#include <studio.h>
 
   int main (void)
   {
     string answer = get_string ("What's your name?);
     printf ("Hello, %s", answer);
-  }`` 
+  } 
+  
+~~~~
+
+A parte do código `int main (void)` é um tipo de código base da linguagem C.
+
+Toda vez que for feita uma alteração no código, não basta apenas salvar, deve-se sempre compilar o arquivo com o comando no terminal ` make nomeDoArquivo ` para depois executar ` ./nomeDoArquivo ` 
+
+### Comandos no terminal :
+
+
+
+
+
+
