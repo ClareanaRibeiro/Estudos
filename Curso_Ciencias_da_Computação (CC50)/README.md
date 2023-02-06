@@ -1,5 +1,4 @@
-Aula 0 - 
-Professor: David J. Malan
+## Aula 0 - Introdução - Professor: David J. Malan
 
 # O que é Ciência da Computação?
 A Ciência da Computação estuda metodologias, técnicas e instrumentos computacionais visando automatizar processos e desenvolver soluções. 
@@ -24,9 +23,9 @@ Se os computadores só entendem números, poderemos atribuir os números do sist
 
 *ASCII - Foi definido um mapeamento padrão de números em letras. A letra “A”, por exemplo, é o número 65, ou em padrão de bits é representada por 01000001. E a letra "B" é o número 66 e assim por diante.
 
-Quando escrevemos "HI!" (72/ 73/ 33 - tabela ASCII), o computador recebe, tecnicamente, um padrão de bits (total de 24 bits), que representa uma letra específica no código ASCII. Cada letra é normalmente representada com um padrão de oito bits, ou um byte, então as sequências de bits que receberíamos são 01001000 , 01001001 e 00100001.
+Quando escrevemos "HI!" (72/ 73/ 33 - tabela ASCII), o computador recebe, tecnicamente, um padrão de bits (total de 24 bits), que representa uma letra específica no código ASCII. Cada letra é normalmente representada com um padrão de oito bits, ou um byte, então as sequências de bits que receberíamos são 01001000 , 01001001 e 00100001 respectivamente.
  
-Temos 256 possibilidades representadas com 8 bits (1 byte), que são representadas na tabela ASCII, mas não são o suficiente. Ainda falta a representaçãodos caracteres de acentuação, símbolos utilizados em outras linguas, além dos emojis.
+Temos 256 possibilidades representadas com 8 bits (1 byte), que são representadas na tabela ASCII, mas não são o suficiente. Ainda falta a representação dos caracteres de acentuação, símbolos utilizados em outras linguas, além dos emojis.
 
 *UNICODE - Sistema que utiliza não apenas 8 bits (como ASCII), mas também 16, 24, 32 bits combinados em padrões de 0 e 1 que suporta todas as linguas humanas e emoji, pois existe uma quantidade muito maior de possibilidades.
 
@@ -66,3 +65,5 @@ A música também pode ser representada com bits, um número para representar ca
 São instruções passo a passo precisos para a solução de problemas, como seguir o passo a passo de uma receita.
 
 *BUGS - Erro de um programa ou um engano
+
+
