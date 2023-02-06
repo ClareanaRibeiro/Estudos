@@ -43,7 +43,7 @@ Da mesma forma que é aplicada para as letras, temos a possibilidade de 256 comb
 **PIXEL** - são os quadradinhos minúsculos (pontos) que representam alguma cor. 1 pixel usa 24 bits, ou 3 bytes.
 
             R          G         B 
-1 pixel =  8 bits    8 bits    8 bits = TOTAL de 24 bits para representar a formação da cor de cada pixel
+1 pixel =  8 bits  +  8 bits  +  8 bits = TOTAL de 24 bits para representar a formação da cor de cada pixel
         qtdade de vermelho, de verde e azul respectivamente
 
 As imagens são compostas por muitos, milhares ou milhões desses pixels. Então, usando três bytes para representar a cor de cada pixel, podemos criar imagens.
