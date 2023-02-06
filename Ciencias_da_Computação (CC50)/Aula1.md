@@ -1,4 +1,4 @@
-# Aula 1 - Linguagem C - Professor: David J. Malan
+# Aula 1: Linguagem C - Professor: David J. Malan
 
 Para salvar arquivos na linguagem C, por padrão o final é .c (ex: nomeDoArquivo.c)
 
@@ -17,7 +17,7 @@ OBS: Esse comando irá criar uma espécie de cópia do arquivo que receberá aut
 
 **COMANDO NO TERMINAL PARA EXECUTAR:**  `./nomeDoArquivo`
 
-**FUNÇÔES** - São como miniprogramas, como uma ação ou um verbo, um bloco de instruções para executar determinada ação.
+**FUNÇÕES** - São como miniprogramas, como uma ação ou um verbo, um bloco de instruções para executar determinada ação.
 As funções podem receber argumentos, também chamados de parâmetros que ficam no código entre (). 
 As funções podem devolver um resultado, chamado de retorno. O ideal é que esteja armazenada em uma variável para ser que possa ser utilizada posteriormente no código.
 
