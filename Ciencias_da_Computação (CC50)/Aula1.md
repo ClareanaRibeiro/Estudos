@@ -28,13 +28,13 @@ As funções podem devolver um resultado, chamado de retorno. O ideal é que est
 Na criação de uma variável em C, deve-se dizer qual tipo de variável é. 
 Ex: criação de uma variável chamada answer que é do tipo string: 
 
- `string aswer = get_string ("What's you name?");`
+ `string answer = get_string ("What's you name?");`
 
 Quando escrevemos o código atribuindo `=` o valor a uma variável, o computador vai executar primeiro o lado direito do `=` para depois executar o lado esquerdo que é armazenar o resultado na variável answer.
 
 **%s** - é o formato de código para receber um valor. 
 
-` printf ("hello, %s", aswer); `
+` printf ("hello, %s", answer); `
 
 Significa apenas que queremos que a função printf substitua uma variável onde está o marcador %s. E a variável que queremos usar é answer, que passamos para printf como outro argumento, separado do primeiro por uma vírgula.
 
@@ -58,7 +58,29 @@ A parte do código `int main (void)` é um tipo de código base da linguagem C.
 
 Toda vez que for feita uma alteração no código, não basta apenas salvar, deve-se sempre compilar o arquivo com o comando no terminal ` make nomeDoArquivo ` para depois executar ` ./nomeDoArquivo ` 
 
-### Comandos no terminal :
+### Principais comandos no terminal :
+
+- Para visualizar arquivos ou pastas dentro da pasta (diretório) atual: ` ls `
+
+- Para exluir um arquivo: ` rm nomeDoArquivo `  - Depois confirmar a exclusão com yes ou y
+
+- Para renomear um arquivo: ` mv nomeDoArquivo.c  novoNome.c `
+
+- Para criar uma pasta (diretório): ` mkdir nomeDaPasta `
+
+- Para mover um arquivo para uma pasta: ` mv nomeDoArquivo.c nomePasta/ `
+
+- Para entrar em uma pasta (diretório): ` cd nomeDaPasta `
+  Ficará dessa forma no terminal em azul: `  ~/NomeDaPasta/ $ `
+
+- Para acessar o diretório principal ou pai (como se fosse a pasta Meus Documentos): ` cd .. `
+
+- Para mover um arquivo para diretório principal: ` mv nomeDoArquivo.c .. `
+
+- Para excluir uma pasta (diretório): ` rmdir nomePasta/ `
+
+DICA: Quando o arquivo é executável, ou seja, depois que foi compilado e está em binário, pronto para ser executado, o arquivo aparece na cor verde no terminal e com um *
+
 
 
 
