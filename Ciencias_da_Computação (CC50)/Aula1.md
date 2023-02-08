@@ -111,11 +111,11 @@ Para a função printf, também, existem diferentes marcadores de posição para
 ### Açúcar sintático:
 
 São como expressões abreviadas com a mesma funcionalidade. 
-Como exemplo abaixo, a declaração da variável contador que se somará mais 1.
+Por exemplo, a declaração da variável contador que se somará mais 1.
 
 `int numero = 0 `  // declaração de variável do tipo int 
 
-`contador = contador + 1` é o mesmo que `contador += 1" ` que é o mesmo que ` contador++ ` 
+`contador = contador + 1` é o mesmo que `contador += 1 ` que é o mesmo que ` contador++ ` 
 
 
 
