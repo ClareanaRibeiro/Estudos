@@ -93,7 +93,7 @@ Cada um desses tipos de dados tem um número especicífico de bits.
  - **double**: número real com mais dígitos do que um float (64 bits/8 bytes)
  - **string**: uma linha de caracteres
   
-Na biblioteca CS50 tem funções correspondentes para obter entrada de vários tipos: get_char, get_int, get_long, get_float, get_double, get_string
+Na biblioteca CS50 tem funções correspondentes para obter entrada de vários tipos: `get_char`, `get_int`, `get_long`, `get_float`, `get_double`, `get_string`.
 
   
 Para a função printf, também, existem diferentes marcadores de posição para cada tipo:
@@ -103,6 +103,19 @@ Para a função printf, também, existem diferentes marcadores de posição para
 - **%li**: para long
 - **%f**: para floats e double
 - **%s**: para string
+
+### Operadores:
+
+`+`  `-`  `*` `/` `%` (para calcular o resto)
+
+### Açúcar sintático:
+
+São como expressões abreviadas com a mesma funcionalidade. 
+Como exemplo abaixo, a declaração da variável contador que se somará mais 1.
+
+`int numero = 0 `  // declaração de variável do tipo int 
+
+`contador = contador + 1` é o mesmo que `contador += 1" ` que é o mesmo que ` contador++ ` 
 
 
 
