@@ -113,7 +113,7 @@ Para a função printf, também, existem diferentes marcadores de posição para
 São como expressões abreviadas com a mesma funcionalidade. 
 Por exemplo, a declaração da variável contador que se somará mais 1.
 
-`int numero = 0 `  // declaração de variável do tipo int 
+`int contador = 0 `  // declaração de variável do tipo int 
 
 `contador = contador + 1` é o mesmo que `contador += 1 ` que é o mesmo que ` contador++ ` 
 
