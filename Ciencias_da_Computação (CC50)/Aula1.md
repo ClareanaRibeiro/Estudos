@@ -58,7 +58,7 @@ A parte do código `int main (void)` é um tipo de código base da linguagem C.
 
 Toda vez que for feita uma alteração no código, não basta apenas salvar, deve-se sempre compilar o arquivo com o comando no terminal ` make nomeDoArquivo ` para depois executar ` ./nomeDoArquivo ` 
 
-### Principais comandos no terminal :
+### Principais comandos no terminal:
 
 - Para visualizar arquivos ou pastas dentro da pasta (diretório) atual: ` ls `
 
@@ -79,8 +79,30 @@ Toda vez que for feita uma alteração no código, não basta apenas salvar, dev
 
 - Para excluir uma pasta (diretório): ` rmdir nomePasta/ `
 
-DICA: Quando o arquivo é executável, ou seja, depois que foi compilado e está em binário, pronto para ser executado, o arquivo aparece na cor verde no terminal e com um *
+DICA: Quando o arquivo é executável, ou seja, depois que foi compilado e está em binário, pronto para ser executado, o arquivo aparece na cor verde no terminal seguido de um * 
 
+### Tipos de dados:
+
+Cada um desses tipos de dados tem um número especicífico de bits.
+
+ - **bool**: uma expressão booleana que retorna verdadeiro ou falso
+ - **char**: um único caractere ASCII como a ou 2
+ - **int**: número inteiro (32 bits/ 4 bytes)
+ - **long**: número inteiros longos maiores que o int (64 bits/ 8 bytes)
+ - **float**: número real com até 6 dígitos (32 bits/4 bytes)
+ - **double**: número real com mais dígitos do que um float (64 bits/8 bytes)
+ - **string**: uma linha de caracteres
+  
+Na biblioteca CS50 tem funções correspondentes para obter entrada de vários tipos: get_char, get_int, get_long, get_float, get_double, get_string
+
+  
+Para a função printf, também, existem diferentes marcadores de posição para cada tipo:
+
+- **%c**: para char
+- **%i**: para int
+- **%li**: para long
+- **%f**: para floats e double
+- **%s**: para string
 
 
 
