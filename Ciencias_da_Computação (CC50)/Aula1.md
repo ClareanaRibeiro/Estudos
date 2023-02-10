@@ -264,7 +264,7 @@ Resultado do que será impresso:
 Esse resultado errado ocorre porque não temos bits suficientes para armazenar esse valor. 
 Com um número finito de bits para um float, não podemos representar todos os números reais, então o computador tenta fazer uma aproximação mais próximo que puder do valor. Isso se chama **imprecisão de vírgula flutuante**.
 
-**overflow (“vazamento”) de inteiro** - Em um computador pessoal, por exemplo, o maior inteiro que é possível representar em sua memória é 4.294.967.295. Caso alguma conta executada pelo computador dê um resultado acima desse número, ocorrerá o que chamamos de overflow, que é quando o computador faz uma conta e o resultado não pode ser representado, por ser maior do que o valor máximo permitido (em inglês overflow significa trasbordar).
+**Overflow (“vazamento”) de inteiro** - Em um computador pessoal, por exemplo, o maior inteiro que é possível representar em sua memória é 4.294.967.295. Caso alguma conta executada pelo computador dê um resultado acima desse número, ocorrerá o que chamamos de overflow, que é quando o computador faz uma conta e o resultado não pode ser representado, por ser maior do que o valor máximo permitido (em inglês overflow significa trasbordar).
 
 **BUG do milênio ou Y2K**, ocorreu porque os computadores foram programados para armazenar anos com apenas 2 digitos. E na passagem do ano de 99 para 2000, os programas tiveram que armazenar apenas 00, levando a confusão entre os anos 1900 e 2000.
 
