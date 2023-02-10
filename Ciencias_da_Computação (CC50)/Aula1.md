@@ -87,22 +87,22 @@ Cada um desses tipos de dados tem um número especicífico de bits.
 
  - **bool**: uma expressão booleana que retorna verdadeiro ou falso
  - **char**: um único caractere ASCII como a ou 2
+ - **string**: uma linha de caracteres
  - **int**: número inteiro (32 bits/ 4 bytes)
  - **long**: número inteiros longos maiores que o int (64 bits/ 8 bytes)
  - **float**: número real com até 6 dígitos (32 bits/4 bytes)
  - **double**: número real com mais dígitos do que um float (64 bits/8 bytes)
- - **string**: uma linha de caracteres
-  
+   
 Na biblioteca CS50 tem funções correspondentes para obter entrada de vários tipos: `get_char`, `get_int`, `get_long`, `get_float`, `get_double`, `get_string`.
 
   
 Para a função printf, também, existem diferentes marcadores de posição para cada tipo:
 
 - **%c**: para char
+- **%s**: para string
 - **%i**: para int
 - **%li**: para long
 - **%f**: para floats e double
-- **%s**: para string
 
 ### Operadores:
 
@@ -117,8 +117,125 @@ Por exemplo, a declaração da variável contador que se somará mais 1.
 
 `contador = contador + 1` é o mesmo que `contador += 1 ` que é o mesmo que ` contador++ ` 
 
+### Condições:
+
+- If
+- If / else
+- If / else if/ else
+
+Segue abaixo exemplo de código a ser analisado:
+
+~~~~
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+     // Solicita um caracter para o usuário
+     char c = get_char("Você concorda? Digite s para sim ou n para não");
+
+     // Verifica se concordou
+     if (c == ‘S’ || c == ‘s’)
+     {
+         printf(“Concordo.\n”); 
+     }
+     else if (c == ‘N’ || c == ‘n’)
+     {
+        printf(“Não concordo..\n”); 
+     }
+}
+
+~~~~
+
+OBSERVAÇÕES:
+
+* Para comparar dois valores usamos ` == `. O uso de apenas um ` = ` é para atribuição de valor a uma variável.
+
+* Usamos ` || `  para indicar um “ou” lógico, onde qualquer uma das expressões pode ser verdadeira para que a condição seja seguida. Usamos ` && ` para indicar um “e” lógico, onde ambas as condições deveriam ser verdadeiras.
+
+* Em C, deve-se usar aspas simples ` ’  ` para envolver caracteres únicos.
+
+* ` \n ` é usado para pular linha
+
+### Expressões booleanas e loops (laço de repetição): while, do while  e for
+
+- **while** - é uma estrutura de repetição, ou seja, uma estrutura que usamos para repitir um trecho de código enquanto uma certa condição for verdadeira.
+
+- **do while** - parecida com while, a diferença é que executa-se ao menos uma vez o bloco de código e só depois confirma se a condição se cumpre.
+
+~~~
+
+int i = 0;
+while (i < 50)
+{
+    printf(“Oi mundo!\n”); 
+    i++;
+}
+
+~~~
 
 
+Porém esse caso o código poderia ser melhorado usando o laço de repetição **for** 
+
+
+~~~ 
+
+int i = 0;
+for (int i = 0; i < 50; i++)
+{
+    printf(“Oi mundo!\n”); 
+}
+
+~~~
+
+- **for** - O uso do loop do tipo for é mais recomendado, uma vez que tudo relacionado ao loop está na mesma linha, e somente o código que realmente desejamos executar multiplas vezes está dentro do loop.
+Sua estrutura ` for (int i = 0; i < 50; i++) ` consiste em: declaração da variável, condição e incremento.
+
+Note que condições do tipo if e loops do tipo for, não colocamos um ponto e vírgula no final. É assim que a linguagem C foi projetada e uma regra geral é que apenas as linhas para ações ou verbos têm ponto e vírgula no final.
+
+
+Vamos analisar o código abaixo:
+
+~~~
+
+#include <cs50.h>
+#include <stdio.h>
+
+int get_positive_int(void);
+
+int main(void)
+{
+     int i = get_positive_int();
+     printf(“%i\n”);
+}
+
+// Solicita um número inteiro positivo ao usuário
+int get_positive_int(void)
+{
+     int n;
+     do
+     {
+          n = get_int(“Número positivo: \n”); 
+	 }
+     while(n < 1);
+     return n;
+}
+
+~~~
+
+
+OBSERVAÇÕES:
+
+* Convencionalmente, a função principal(main) deve ser a primeira do programa, então precisamos declarar a função `get_positive_int `primeiro com um protótipo, antes de usá-la, e depois definí-la. O compilador lê o código de cima para baixo, então ele precisa saber que a função existirá posteriormente no arquivo. 
+
+* Precisamos declarar a variável ` n ` fora do loop do-while, pois a usaremos após o término do loop. O **escopo** de uma variável se refere ao contexto, ou linhas de código, dentro do qual ela existe. Por exemplo, se uma variável é declarada dentro de uma função { }, ela será válida apenas para aquela função, não podendo ser reaproveitada posteriormente no código. Pode-se declarar a variável inicialmente sem atribuir valor a ela e só depois o valor ser atribuido quando for pertinente.
+
+* Na biblioteca do cs50, possui a função get_int mas o intuito é coletar do usuário apenas números pares, por isso a criação da função get_positive_int.`
+
+* Com um loop do-while, o programa fará algo primeiro, depois verificará alguma condição e repetirá enquanto a condição for verdadeira. Nesse caso primeiro vai pedir o número ao usuário para depois verificar a condição.
+
+* Observe que a função `get_positive_int `agora começa com ` int `, indicando que ela tem um valor de retorno do tipo int que foi armazenada na variável `n ` e poderá ser utilizada posteriormente no código.
 
 
 
