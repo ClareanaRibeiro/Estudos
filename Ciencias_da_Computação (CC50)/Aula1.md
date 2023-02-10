@@ -156,7 +156,7 @@ OBSERVAÇÕES:
 
 * Em C, deve-se usar aspas simples ` ’  ` para envolver caracteres únicos.
 
-* ` \n ` é usado para pular linha
+* ` \n ` é usado para pular linha.
 
 ### Expressões booleanas e loops (laço de repetição): while, do while  e for
 
@@ -192,7 +192,7 @@ for (int i = 0; i < 50; i++)
 - **for** - O uso do loop do tipo for é mais recomendado, uma vez que tudo relacionado ao loop está na mesma linha, e somente o código que realmente desejamos executar multiplas vezes está dentro do loop.
 Sua estrutura ` for (int i = 0; i < 50; i++) ` consiste em: declaração da variável, condição e incremento.
 
-Note que condições do tipo if e loops do tipo for, não colocamos um ponto e vírgula no final. É assim que a linguagem C foi projetada e uma regra geral é que apenas as linhas para ações ou verbos têm ponto e vírgula no final.
+Note que condições do tipo if e loops do tipo for, não colocamos um ` ; ` no final. É assim que a linguagem C foi projetada e uma regra geral. Apenas as linhas para ações ou verbos tem `; ` no final como se fosse o fim de um raciocínio.
 
 
 Vamos analisar o código abaixo:
@@ -233,9 +233,39 @@ OBSERVAÇÕES:
 
 * Na biblioteca do cs50, possui a função get_int mas o intuito é coletar do usuário apenas números pares, por isso a criação da função get_positive_int.`
 
-* Com um loop do-while, o programa fará algo primeiro, depois verificará alguma condição e repetirá enquanto a condição for verdadeira. Nesse caso primeiro vai pedir o número ao usuário para depois verificar a condição.
+* Com um loop do-while, o programa fará algo primeiro, depois verificará alguma condição e repetirá enquanto a condição for verdadeira. Nesse caso, primeiro vai pedir o número ao usuário para depois verificar a condição.
 
-* Observe que a função `get_positive_int `agora começa com ` int `, indicando que ela tem um valor de retorno do tipo int que foi armazenada na variável `n ` e poderá ser utilizada posteriormente no código.
+* Observe que a função `get_positive_int `agora começa com ` int `, indicando que ela tem um valor de retorno do tipo int que foi armazenada na variável `n `e poderá ser utilizada posteriormente no código.
 
+
+### Memória, Imprecisão e Bug do milênio
+
+Note no código abaixo que foi especificado para 50 o número de casas decimais com  ` % .50f ` a ser printado do resultado da divisão entre x e y, supondo que usuário preencheu como 1 e 10 respectivamente.
+
+~~~
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    float x = get_float("x: ");
+    float y = get_float("y: ");
+    	
+    printf(“%.50f\n", x / y;); 
+}
+
+~~~ 
+
+Resultado do que será impresso: 
+
+`0,10000000149011611938476562500000000000000000000000 `
+
+Esse resultado errado ocorre porque não temos bits suficientes para armazenar esse valor. 
+Com um número finito de bits para um float, não podemos representar todos os números reais, então o computador tenta fazer uma aproximação mais próximo que puder do valor. Isso se chama **imprecisão de vírgula flutuante**.
+
+**overflow (“vazamento”) de inteiro** - Em um computador pessoal, por exemplo, o maior inteiro que é possível representar em sua memória é 4.294.967.295. Caso alguma conta executada pelo computador dê um resultado acima desse número, ocorrerá o que chamamos de overflow, que é quando o computador faz uma conta e o resultado não pode ser representado, por ser maior do que o valor máximo permitido (em inglês overflow significa trasbordar).
+
+**BUG do milênio ou Y2K**, ocorreu porque os computadores foram programados para armazenar anos com apenas 2 digitos. E na passagem do ano de 99 para 2000, os programas tiveram que armazenar apenas 00, levando a confusão entre os anos 1900 e 2000.
 
 
