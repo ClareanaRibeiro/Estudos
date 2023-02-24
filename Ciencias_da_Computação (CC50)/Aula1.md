@@ -62,7 +62,7 @@ Toda vez que for feita uma alteração no código, não basta apenas salvar, dev
 
 - Para visualizar arquivos ou pastas dentro da pasta (diretório) atual: ` ls `
 
-- Para exluir um arquivo: ` rm nomeDoArquivo `  - Depois confirmar a exclusão com yes ou y
+- Para excluir um arquivo: ` rm nomeDoArquivo `  - Depois confirmar a exclusão com yes ou y
 
 - Para renomear um arquivo: ` mv nomeDoArquivo.c  novoNome.c `
 
@@ -192,7 +192,7 @@ for (int i = 0; i < 50; i++)
 - **for** - O uso do loop do tipo for é mais recomendado, uma vez que tudo relacionado ao loop está na mesma linha, e somente o código que realmente desejamos executar multiplas vezes está dentro do loop.
 Sua estrutura ` for (int i = 0; i < 50; i++) ` consiste em: declaração da variável, condição e incremento.
 
-Note que condições do tipo if e loops do tipo for, não colocamos um ` ; ` no final. É assim que a linguagem C foi projetada e uma regra geral. Apenas as linhas para ações ou verbos tem `; ` no final como se fosse o fim de um raciocínio.
+Note que condições do tipo if e loops do tipo for, não colocamos um ` ; ` no final. É assim que a linguagem C foi projetada, é uma regra geral. Apenas as linhas para ações ou verbos tem `; ` no final como se fosse o fim de um raciocínio.
 
 
 Vamos analisar o código abaixo:
