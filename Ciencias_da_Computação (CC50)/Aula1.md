@@ -85,10 +85,10 @@ DICA: Quando o arquivo é executável, ou seja, depois que foi compilado e está
 
 Cada um desses tipos de dados tem um número especicífico de bits.
 
- - **bool**: uma expressão booleana que retorna verdadeiro ou falso
- - **char**: um único caractere ASCII como a ou 2
- - **string**: uma linha de caracteres
- - **int**: número inteiro (32 bits/ 4 bytes)
+ - **bool**: uma expressão booleana que retorna verdadeiro ou falso (tam: 8 bits/1 byte)
+ - **char**: um único caractere ASCII como a ou 2 (tam: 8 bits/ 1 byte)
+ - **string**: uma linha de caracteres (tam: ? indefinido)
+ - **int**: número inteiro (tam: 32 bits/ 4 bytes)
  - **long**: número inteiros longos maiores que o int (64 bits/ 8 bytes)
  - **float**: número real com até 6 dígitos (32 bits/4 bytes)
  - **double**: número real com mais dígitos do que um float (64 bits/8 bytes)
