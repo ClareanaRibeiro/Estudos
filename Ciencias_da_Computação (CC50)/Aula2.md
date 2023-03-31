@@ -54,7 +54,7 @@ OBSERVAÇÕES:
 
 * A palavra **const** é usada para definir uma variável cujo valor nunca muda no prgrama, seu valor é fixo.
 
-* A const **TOTAL** - por convenção, a variável é declarada fora da função principal(main) e em letra maiúscula para mostra a outros humanos que esta variável é uma constante afim de facilitar a visualização.
+* A const **TOTAL** - por convenção é declarada fora da função principal(main) e em letra maiúscula para indicar que variável é uma constante afim de facilitar a visualização.
 
 
 ## Conversão de tipo de dado feito implicitamente pelo compilador:
@@ -74,7 +74,7 @@ int main(void)
 ~~~~ 
 
 Quando executado, o programa imprimirá ` # ` 
-Mas se mudarmos e solicitarmos ao programa que imprima - printf("%i/n") - a variável `c` com tipo de dado inteiro.
+Mas e se mudarmos e solicitarmos ao programa que imprima **printf("%i/n")** a variável `c` com tipo de dado inteiro.
 
 ~~~~
 
@@ -88,19 +88,131 @@ int main(void)
 
 ~~~~
 
-O programa imprimirá o número **35** que é o código ASCII para um símbolo #.
+O programa imprimirá o número **35** que é o código ASCII para um símbolo **#**.
 
 
 # STRINGS
 
-Strings são, na verdade, apenas matrizes de caracteres e definidas não em C, mas pela biblioteca CS50. Se tivéssemos um array chamado s, cada caractere pode ser acessado com s[0], s[1] e assim por diante.
+Strings são, na verdade, apenas matrizes de caracteres e definidas não em C, mas pela biblioteca CS50.           Se tivéssemos um array chamada s, cada caracter pode ser acessado com s[0], s[1] e assim por diante.
 
-Uma string termina com um caractere especial, `\0`, ocupando um byte. Esse caractere é chamado de caractere nulo ou NUL. 
+Uma string termina com um caractere especial, `\0`, que ocupa mais um byte na memória do computador. Esse caracter é chamado de caractere nulo ou NUL. 
 
 Dessa forma uma string declarada como `string s = "HI!" ` ocuparia não 3 bytes na memória e sim 4 bytes porque ao final da sequência de caracteres é reservado um espaço para `\0` para representar o final de uma string e indicar o início de uma nova string.
 
      H     I     !    \0
-s   [0]   [1]   [2]   [3]
+    [0]   [1]   [2]   [3]
+
+
+
+Segue abaixo um loop para imprimir todos os caracteres de uma string.
+
+~~~~
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    string s = get_string("Input:  ");
+    printf("Saída: ");
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        printf("%c", s[i]);
+    }
+    printf("\n");
+}
+
+~~~~ 
+
+OBSERVAÇÃO:
+
+A condição do looping para identificar o tamanho (comprimento) da string foi:  `s[i] != \0 ` - Já que em C, no final de cada string tem **\0** e essa condição está verificando se o índice que está sendo verificado é diferente de **\0**.
+
+Porém na biblioteca de strings de C, temos a função **strlen**, que serve para obter o comprimento de uma string, e é justamente esse raciocínio que acontece por debaixo dos panos e foi utilizado para a construção dessa função.
+
+~~~~
+
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string s = get_string("Input: ");
+    printf("Saída:\n");
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        printf("%c\n", s[i]);
+    }
+}
+
+~~~~
+
+Segue abaixo o exemplo de 2 programas, ambos transformam os caracteres minúsculos em maiúsculas.
+O 1º com o raciocínio utilizado para atingir esse objetivo e o 2º a partir do uso da função **toupper** que alguém criou com esse intuito e está inclusa na biblioteca **ctype**.
+
+~~~~
+
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string s = get_string("Before: ");
+    printf("After:  ");
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        if (s[i] >= 'a' && s[i] <= 'z')
+        {
+            printf("%c", s[i] - 32);
+        }
+        else
+        {
+            printf("%c", s[i]);
+        }
+    }
+    printf("\n");
+}
+
+~~~~
+
+OBSERVAÇÃO: 
+
+* A condição vai avaliar caracter por caracter em looping. Se estiver em minúsculas (o que significa que tem um valor entre o de a e z), será convertido para maiúsculas.
+
+* Pq ` - 32 `? - Porque no código ASCII, **a** minúsculo corresponde à 97 e **A** maiúsculo corresponde à 65. (97-65 =32). E o mesmo acontece assim em diante para todas as outras letras. Ex: b=98 | B=66 (A diferença sempre será 32.)
+
+~~~~
+
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string s = get_string("Antes: ");
+    printf("Depois:  ");
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        printf("%c", toupper(s[i]));
+    }
+    printf("\n");
+}
+
+~~~~
+
+OBSERVAÇÃO:
+
+* Aqui a função **toupper** vai transformar o caracter minúsculo em maiúsculo e caso o caracter já estiver maiúsculo irá permanecer maiúsculo.
+
+* A função **toupper** espera que passe como parâmetro apenas 1 caracter (char - c), e não suporta que passe uma string, por isso é indispensável o uso do loop.
+
+Assim como a função *toupper* na biblioteca *ctype*, e a função *strlen* na biblioteca *string*, existem diversas outras funções já criadas anteriormente por outras pessoas afim de facilitar a vida disponíveis em outras bibliotecas. Por isso a vantagem de utilizar uma linguagem popular.
+
+
+
 
 
 
