@@ -154,7 +154,9 @@ OBSERVAÇÕES:
 
 * Usamos ` || `  para indicar um “ou” lógico, onde qualquer uma das expressões pode ser verdadeira para que a condição seja seguida. Usamos ` && ` para indicar um “e” lógico, onde ambas as condições deveriam ser verdadeiras.
 
-* Em C, deve-se usar aspas simples ` ’  ` para envolver caracteres únicos.
+* Ainda temos os operadores lógicos:  `!` para negação e  `!=` para indicar que não é igual.
+
+* Em C, deve-se usar aspas simples ` ’  ` para envolver caracteres único e aspas duplas para múltiplos caracteres.
 
 * ` \n ` é usado para pular linha.
 
